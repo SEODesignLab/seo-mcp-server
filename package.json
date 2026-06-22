@@ -1,6 +1,6 @@
 {
   "name": "@seodesignlab/mcp-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for SEODesignLab's x402-protected SEO endpoints — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
