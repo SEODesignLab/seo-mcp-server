@@ -5,7 +5,7 @@
  * (Claude, Cursor, VS Code, etc.) can discover and use them via
  * the Model Context Protocol.
  *
- * Pricing (USDC on Polygon):
+ * Pricing (USDC on Base):
  *   - Content Brief:  $2.00
  *   - Keyword Research: $1.50
  *   - SERP Analysis:   $2.00
@@ -13,10 +13,10 @@
  *   - On-Page Audit:  $2.50
  *
  * The server reads SEO_API_BASE from the environment to know
- * where to send requests.  Default: https://seo-content-brief-tool.onrender.com
+ * where to send requests.  Default: https://seodesignlab-paywall.seodesignlab.workers.dev
  *
  * For x402 payments the server reads X402_PAY_TO (wallet) and
- * X402_NETWORK (default "polygon").  When these are set every
+ * X402_NETWORK (default "base").  When these are set every
  * outgoing request includes the x402 payment header so the
  * Cloudflare Worker paywall can settle the micropayment
  * automatically.  When they are *not* set the server falls back
@@ -34,12 +34,12 @@ import { z } from "zod";
 
 const SEO_API_BASE =
   process.env.SEO_API_BASE ??
-  "https://seo-content-brief-tool.onrender.com";
+  "https://seodesignlab-paywall.seodesignlab.workers.dev";
 
-/** Polygon wallet that receives x402 payments */
+/** Base wallet that receives x402 payments */
 const X402_PAY_TO = process.env.X402_PAY_TO ?? "";
 /** Network for x402 settlement (default: polygon) */
-const X402_NETWORK = process.env.X402_NETWORK ?? "polygon";
+const X402_NETWORK = process.env.X402_NETWORK ?? "base";
 
 // ---------------------------------------------------------------------------
 // Pricing table — mirrors the Cloudflare Worker PROTECTED_PATTERNS
@@ -195,7 +195,7 @@ server.tool(
   "get_content_brief",
   `Generate a POP (PageOptimizer Pro) content brief for a target keyword.
 
-Price: $2.00 (x402 on Polygon)
+Price: $2.00 (x402 on Base)
 
 Returns a detailed content brief including:
 - Target keyword analysis
@@ -231,7 +231,7 @@ server.tool(
   "keyword_research",
   `Research keyword metrics including search volume, CPC, and competition difficulty.
 
-Price: $1.50 (x402 on Polygon)
+Price: $1.50 (x402 on Base)
 
 Returns:
 - Monthly search volume
@@ -266,7 +266,7 @@ server.tool(
   "serp_analysis",
   `Analyze the top 10 SERP results for a keyword with metrics.
 
-Price: $2.00 (x402 on Polygon)
+Price: $2.00 (x402 on Base)
 
 Returns:
 - Top 10 organic results with URLs
@@ -301,7 +301,7 @@ server.tool(
   "backlink_profile",
   `Get the backlink profile for a domain — referring domains, link metrics, and anchor text analysis.
 
-Price: $3.00 (x402 on Polygon)
+Price: $3.00 (x402 on Base)
 
 Returns:
 - Referring domains count
@@ -327,7 +327,7 @@ server.tool(
   "on_page_audit",
   `Run a comprehensive on-page SEO audit for a URL.
 
-Price: $2.50 (x402 on Polygon)
+Price: $2.50 (x402 on Base)
 
 Returns:
 - Meta title and description analysis
