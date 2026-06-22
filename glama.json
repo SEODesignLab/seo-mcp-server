@@ -1,0 +1,40 @@
+{
+  "displayName": "SEODesignLab SEO Tools",
+  "description": "Pay-per-use SEO tools via x402 protocol — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits. $0.50-$3.00 per request in USDC on Base.",
+  "category": "seo",
+  "tags": ["seo", "x402", "content-brief", "keyword-research", "serp-analysis", "backlink", "audit", "micropayment"],
+  "remote": {
+    "type": "streamable-http",
+    "url": "https://seodesignlab-paywall.seodesignlab.workers.dev/mcp"
+  },
+  "pricing": {
+    "model": "per-request",
+    "currency": "USDC",
+    "network": "base",
+    "endpoints": [
+      { "name": "content_brief", "price": "$2.00" },
+      { "name": "keyword_research", "price": "$1.50" },
+      { "name": "serp_analysis", "price": "$2.00" },
+      { "name": "backlink_profile", "price": "$3.00" },
+      { "name": "on_page_audit", "price": "$2.50" }
+    ]
+  },
+  "repository": "https://github.com/SEODesignLab/seo-mcp-server",
+  "environmentVariables": [
+    {
+      "name": "SEO_API_BASE",
+      "description": "Base URL for the SEO API (default: https://seodesignlab-paywall.seodesignlab.workers.dev)",
+      "required": false
+    },
+    {
+      "name": "X402_PAY_TO",
+      "description": "Wallet address to receive x402 payments",
+      "required": false
+    },
+    {
+      "name": "X402_NETWORK",
+      "description": "Network for x402 settlement (default: base)",
+      "required": false
+    }
+  ]
+}
