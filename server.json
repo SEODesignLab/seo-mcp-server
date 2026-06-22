@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.seodesignlab/seo-tools",
+  "description": "Pay-per-use SEO tools via x402 protocol — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits. $0.50-$3.00 per request in USDC on Base.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://seodesignlab-paywall.seodesignlab.workers.dev/mcp"
+    }
+  ]
+}
