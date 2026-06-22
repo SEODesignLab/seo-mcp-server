@@ -2,7 +2,7 @@
 
 MCP (Model Context Protocol) server for **SEODesignLab's x402-protected SEO endpoints**.
 
-Expose professional SEO tools — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits — to any MCP-compatible AI agent (Claude Desktop, Cursor, VS Code Copilot, etc.) with automatic x402 micropayment handling on Polygon.
+Expose professional SEO tools — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits — to any MCP-compatible AI agent (Claude Desktop, Cursor, VS Code Copilot, etc.) with automatic x402 micropayment handling on Base.
 
 ---
 
@@ -16,7 +16,7 @@ Expose professional SEO tools — content briefs, keyword research, SERP analysi
 | `backlink_profile` | `/api/dataforseo/backlinks/` | $3.00 | Referring domains, link metrics, and anchor text distribution |
 | `on_page_audit` | `/api/dataforseo/audit/` | $2.50 | Full on-page SEO audit — meta, headings, images, links, speed |
 
-All prices are in **USDC on Polygon** and settled via the [x402 protocol](https://x402.org).
+All prices are in **USDC on Base** and settled via the [x402 protocol](https://x402.org).
 
 ---
 
@@ -35,8 +35,8 @@ npx @seodesignlab/mcp-server
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `SEO_API_BASE` | `https://seo-content-brief-tool.onrender.com` | Base URL of the SEO API backend |
-| `X402_PAY_TO` | *(none)* | Polygon wallet address for x402 payments. When set, payment headers are attached automatically. |
-| `X402_NETWORK` | `polygon` | Network for x402 settlement |
+| `X402_PAY_TO` | *(none)* | Base wallet address for x402 payments. When set, payment headers are attached automatically. |
+| `X402_NETWORK` | `base` | Network for x402 settlement
 
 ---
 
@@ -55,7 +55,7 @@ Add to your `claude_desktop_config.json`:
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
         "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
-        "X402_NETWORK": "polygon"
+        "X402_NETWORK": "base"
       }
     }
   }
@@ -79,7 +79,7 @@ Add to your Cursor MCP settings (`.cursor/mcp.json` in your project root or glob
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
         "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
-        "X402_NETWORK": "polygon"
+        "X402_NETWORK": "base"
       }
     }
   }
@@ -100,7 +100,7 @@ Add to your VS Code MCP settings (`.vscode/mcp.json`):
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
         "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
-        "X402_NETWORK": "polygon"
+        "X402_NETWORK": "base"
       }
     }
   }

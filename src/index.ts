@@ -38,7 +38,7 @@ const SEO_API_BASE =
 
 /** Base wallet that receives x402 payments */
 const X402_PAY_TO = process.env.X402_PAY_TO ?? "";
-/** Network for x402 settlement (default: polygon) */
+/** Network for x402 settlement (default: base) */
 const X402_NETWORK = process.env.X402_NETWORK ?? "base";
 
 // ---------------------------------------------------------------------------
