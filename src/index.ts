@@ -148,7 +148,7 @@ async function callSEOApi(
         price: priceInfo?.price ?? "unknown",
         description: priceInfo?.description ?? "SEO API call",
         network: X402_NETWORK,
-        payTo: X402_PAY_TO || "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
+        payTo: X402_PAY_TO || "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         message: `This endpoint requires an x402 micropayment of ${priceInfo?.price ?? "unknown"} on ${X402_NETWORK}. Use an x402-compatible client to settle automatically, or send USDC to the pay-to address.`,
         ...(typeof data === "object" && data !== null ? data : {}),
       },

@@ -54,7 +54,7 @@ Add to your `claude_desktop_config.json`:
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
-        "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
+        "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }
     }
@@ -78,7 +78,7 @@ Add to your Cursor MCP settings (`.cursor/mcp.json` in your project root or glob
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
-        "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
+        "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }
     }
@@ -99,7 +99,7 @@ Add to your VS Code MCP settings (`.vscode/mcp.json`):
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
         "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
-        "X402_PAY_TO": "0xe6c9082fac7AA6A3fdA70D679C5536939c5B4145",
+        "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }
     }
