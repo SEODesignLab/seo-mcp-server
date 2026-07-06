@@ -34,7 +34,7 @@ npx @seodesignlab/mcp-server
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `SEO_API_BASE` | `https://seo-content-brief-tool.onrender.com` | Base URL of the SEO API backend |
+| `SEO_API_BASE` | `https://seodesignlab-paywall.seodesignlab.workers.dev` | Base URL of the SEO API (CF Worker paywall) |
 | `X402_PAY_TO` | *(none)* | Base wallet address for x402 payments. When set, payment headers are attached automatically. |
 | `X402_NETWORK` | `base` | Network for x402 settlement
 
@@ -53,7 +53,7 @@ Add to your `claude_desktop_config.json`:
       "command": "npx",
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
-        "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
+        "SEO_API_BASE": "https://seodesignlab-paywall.seodesignlab.workers.dev",
         "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }
@@ -77,7 +77,7 @@ Add to your Cursor MCP settings (`.cursor/mcp.json` in your project root or glob
       "command": "npx",
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
-        "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
+        "SEO_API_BASE": "https://seodesignlab-paywall.seodesignlab.workers.dev",
         "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }
@@ -98,7 +98,7 @@ Add to your VS Code MCP settings (`.vscode/mcp.json`):
       "command": "npx",
       "args": ["-y", "@seodesignlab/mcp-server"],
       "env": {
-        "SEO_API_BASE": "https://seo-content-brief-tool.onrender.com",
+        "SEO_API_BASE": "https://seodesignlab-paywall.seodesignlab.workers.dev",
         "X402_PAY_TO": "0xc78e3D02622061961156a18E10bbbF07d8e94529",
         "X402_NETWORK": "base"
       }

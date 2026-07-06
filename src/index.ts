@@ -186,7 +186,7 @@ function formatResponse(result: { ok: boolean; status: number; data: unknown }):
 
 const server = new McpServer({
   name: "seodesignlab-seo",
-  version: "1.0.0",
+  version: "1.0.3",
 });
 
 // ---- Tool: get_content_brief ------------------------------------------------
