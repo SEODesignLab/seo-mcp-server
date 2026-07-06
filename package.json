@@ -39,6 +39,7 @@
     "typescript": "^5.5.4",
     "@types/node": "^20.14.10"
   },
+  "mcpName": "io.github.SEODesignLab/seo-tools",
   "engines": {
     "node": ">=18.0.0"
   }
