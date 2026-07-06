@@ -3,9 +3,10 @@
   "description": "Pay-per-use SEO tools via x402 protocol — content briefs, keyword research, SERP analysis, backlink profiles, and on-page audits. $0.50-$3.00 per request in USDC on Base.",
   "category": "seo",
   "tags": ["seo", "x402", "content-brief", "keyword-research", "serp-analysis", "backlink", "audit", "micropayment"],
-  "remote": {
-    "type": "streamable-http",
-    "url": "https://seodesignlab-paywall.seodesignlab.workers.dev/mcp"
+  "install": {
+    "type": "npm",
+    "package": "@seodesignlab/mcp-server",
+    "description": "Run: npx @seodesignlab/mcp-server"
   },
   "pricing": {
     "model": "per-request",
